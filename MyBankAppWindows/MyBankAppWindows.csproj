@@ -47,6 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AccountDetailsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -58,6 +65,12 @@
     </Compile>
     <Compile Include="AccountStatementForm.Designer.cs">
       <DependentUpon>AccountStatementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contact.Designer.cs">
+      <DependentUpon>Contact.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateAccountForm.cs">
       <SubType>UserControl</SubType>
@@ -82,7 +95,8 @@
     <Compile Include="Models\TransactionModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Operations\AccountOperations.cs" />
-    <Compile Include="Operations\TransactionOperation.cs" />
+    <Compile Include="Operations\IAccountOperations.cs" />
+    <Compile Include="Operations\ITransactionOperations.cs" />
     <Compile Include="Operations\UserOperations.cs" />
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
@@ -120,11 +134,17 @@
     <Compile Include="WithdrawalForm.Designer.cs">
       <DependentUpon>WithdrawalForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountDetailsForm.resx">
       <DependentUpon>AccountDetailsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccountStatementForm.resx">
       <DependentUpon>AccountStatementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contact.resx">
+      <DependentUpon>Contact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAccountForm.resx">
       <DependentUpon>CreateAccountForm.cs</DependentUpon>

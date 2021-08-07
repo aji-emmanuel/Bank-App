@@ -46,6 +46,8 @@ namespace MyBankAppWindows
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
@@ -57,17 +59,18 @@ namespace MyBankAppWindows
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(266, 79);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(235)))), ((int)(((byte)(182)))));
+            this.panel1.Location = new System.Drawing.Point(266, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(220, 3);
+            this.panel1.Size = new System.Drawing.Size(230, 3);
             this.panel1.TabIndex = 19;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(235)))), ((int)(((byte)(182)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 44);
+            this.label1.Location = new System.Drawing.Point(266, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(228, 32);
             this.label1.TabIndex = 18;
@@ -78,7 +81,7 @@ namespace MyBankAppWindows
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(235)))), ((int)(((byte)(182)))));
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(324, 509);
+            this.label12.Location = new System.Drawing.Point(324, 479);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 29);
             this.label12.TabIndex = 31;
@@ -132,7 +135,7 @@ namespace MyBankAppWindows
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.balanceOutput);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(168, 388);
+            this.panel2.Location = new System.Drawing.Point(168, 358);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(422, 105);
             this.panel2.TabIndex = 23;
@@ -184,7 +187,7 @@ namespace MyBankAppWindows
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(37, 98);
+            this.panel3.Location = new System.Drawing.Point(37, 68);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(667, 77);
             this.panel3.TabIndex = 33;
@@ -195,7 +198,7 @@ namespace MyBankAppWindows
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Location = new System.Drawing.Point(37, 199);
+            this.panel4.Location = new System.Drawing.Point(37, 169);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(667, 77);
             this.panel4.TabIndex = 33;
@@ -206,7 +209,7 @@ namespace MyBankAppWindows
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(37, 297);
+            this.panel5.Location = new System.Drawing.Point(37, 267);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(667, 77);
             this.panel5.TabIndex = 33;
@@ -224,17 +227,43 @@ namespace MyBankAppWindows
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(235)))), ((int)(((byte)(182)))));
+            this.panel6.Controls.Add(this.button2);
+            this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Location = new System.Drawing.Point(37, 509);
+            this.panel6.Location = new System.Drawing.Point(37, 479);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(667, 66);
+            this.panel6.Size = new System.Drawing.Size(667, 93);
             this.panel6.TabIndex = 34;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(235)))), ((int)(((byte)(182)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(131, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(150, 40);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "About Us";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(235)))), ((int)(((byte)(182)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(403, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 40);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Contact Us";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(202, 22);
+            this.label8.Location = new System.Drawing.Point(204, 56);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(283, 26);
             this.label8.TabIndex = 0;
@@ -300,5 +329,7 @@ namespace MyBankAppWindows
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

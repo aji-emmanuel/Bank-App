@@ -252,6 +252,8 @@ namespace MyBankAppWindows
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.WelcomePagePic);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SignInForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignInForm";

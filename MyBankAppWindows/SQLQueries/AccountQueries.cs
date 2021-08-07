@@ -12,7 +12,7 @@ namespace SQLQueries
     public static class AccountQueries
     {
         /// <summary>
-        /// Adds a created Account of a user to Sql Database
+        /// Adds a created Account of a user to Sql Database and returns a bool if successful
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
@@ -46,7 +46,7 @@ namespace SQLQueries
         }
 
         /// <summary>
-        /// Gets the details of a specific Account using the Account Number.
+        /// Gets the details of a specific Account using the Account Number. Returns an Account Model
         /// </summary>
         /// <param name="accountNumber"></param>
         /// <returns></returns>
@@ -57,7 +57,7 @@ namespace SQLQueries
             try
             {
                 SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["conString"].ToString());
-                SqlCommand cmd= new SqlCommand("Get_AccountType", connection)
+                SqlCommand cmd = new SqlCommand("Get_AccountType", connection)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -80,7 +80,7 @@ namespace SQLQueries
         }
 
         /// <summary>
-        /// Gets all Accounts associated to a logged in User using the User Id
+        /// Gets all Accounts associated to a logged in User using the User Id. Returns a list.
         /// </summary>
         /// <returns></returns>
 
@@ -115,7 +115,7 @@ namespace SQLQueries
         }
 
         /// <summary>
-        /// Generates Random Account numbers
+        /// Generates Random Account numbers. Returns a string.
         /// </summary>
         /// <returns></returns>
 

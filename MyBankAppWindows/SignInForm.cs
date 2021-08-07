@@ -16,7 +16,6 @@ namespace MyBankAppWindows
             InitializeComponent();
         }
 
-
         private void LoginButton_Click(object sender, EventArgs e)
         {
             string email = textUserName.Text;

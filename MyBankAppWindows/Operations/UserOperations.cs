@@ -14,7 +14,7 @@ namespace Operations
         /// <param name="passWord"></param>
         /// <returns></returns>
 
-        public bool UserRegistration(string userId, string accountName, string email, string passWord)
+        public static bool UserRegistration(string userId, string accountName, string email, string passWord)
         {
             UserModel userData = new UserModel(userId, accountName, email, passWord);
 

@@ -8,7 +8,6 @@ namespace MyBankAppWindows
 {
     public partial class RegistrationForm : Form
     {
-        readonly UserOperations user = new UserOperations();
         public RegistrationForm()
         {
             InitializeComponent();
@@ -59,7 +58,7 @@ namespace MyBankAppWindows
                             {
                                 string userId = Guid.NewGuid().ToString();
                                 string accountName = firstName + " "+ lastName; 
-                                bool success = user.UserRegistration(userId, accountName, email, password);
+                                bool success = UserOperations.UserRegistration(userId, accountName, email, password);
                                 if (success)
                                 {
                                     MessageBox.Show($"Congratulations {accountName}, your Registration was Successful!");
@@ -83,26 +82,6 @@ namespace MyBankAppWindows
         {
             Dispose();
             new WelcomeForm().Show();
-        }
-
-        private void firstNameBox_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void lastNameBox_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void emailBox_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void passwordBox1_TextChanged(object sender, EventArgs e)
-        {
-           
         }
     }
 }

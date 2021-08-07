@@ -8,8 +8,7 @@ namespace MyBankAppWindows
 {
     public partial class TransferForm : UserControl
     {
-        readonly TransactionOperation transaction = new TransactionOperation();
-        readonly AccountOperations accountControl = new AccountOperations();
+        AccountOperations account = new AccountOperations();
 
         public TransferForm()
         {
@@ -24,56 +23,47 @@ namespace MyBankAppWindows
             string amount = textBox4.Text;
             string description = textBox3.Text;
 
-            if (accountNumber.ValidateAcctNumber() != true)      // Validates user's inputed Account Number
+            if(accountNumber!=String.Empty || amount!=String.Empty)
             {
-                MessageBox.Show("Invalid Account Number!");
-            }
-            else
-            {
-                if (amount.ValidateAmount() != true)      // Validates user's inputed amount
+                if (accountNumber.ValidateAcctNumber() == true)      // Validates if user entered the correct Account Number format
                 {
-                    MessageBox.Show("Invalid Amount! Amount should be a figure of 100 and above.");
-                }
-                else
-                {
-                    if (senderAccount==accountNumber)
+                    if (amount.ValidateAmount() == true)      // Validates amount the amount entered.
                     {
-                        MessageBox.Show("You can't transfer to yourself!");
-                    }
-                    else
-                    {
-                        if (AccountQueries.GetAccountDetails(accountNumber) != null)
+                        if (senderAccount != accountNumber)  // Checks if Reciever Account Number and Reciever's account Number is same.
                         {
-                            decimal Amount = Convert.ToDecimal(amount);
-                            decimal newBalance1 = accountControl.Withdraw(senderAccount, Amount);
-
-                            if (newBalance1 != -1)
+                            if (AccountQueries.GetAccountDetails(accountNumber) != null)  // Checks if reciever Account Number is registered
                             {
-                                decimal newBalance2 = accountControl.Deposit(accountNumber, Amount);
+                                decimal Amount = Convert.ToDecimal(amount);
+                                bool success = account.Withdraw(senderAccount, description, Amount);
 
-                                if (newBalance2 != -1)
+                                if (success)
                                 {
-                                    bool success1 = transaction.CreditTransaction(accountNumber, amount.ToString(), description, newBalance1);
-                                    bool success2 = transaction.DebitTransaction(senderAccount, amount.ToString(), description, newBalance2);
-                                    if (success1 == true && success2 == true)
+                                    bool success2 = account.Deposit(accountNumber, description, Amount);
+                                    if (success2)
+                                    {
                                         MessageBox.Show("Transfer Successful!");
-                                    textBox2.Clear();
-                                    textBox3.Clear();
-                                    textBox4.Clear();
+                                        textBox2.Clear();
+                                        textBox3.Clear();
+                                        textBox4.Clear();
+                                    }
                                 }
+                                else
+                                    MessageBox.Show("Insufficient Balance");
                             }
                             else
-                            {
-                                MessageBox.Show("Insufficient Balance");
-                            }
+                                MessageBox.Show("Account Number not found!");
                         }
                         else
-                        {
-                            MessageBox.Show("Account Number not found!");
-                        }
+                            MessageBox.Show("You can't transfer to yourself!");
                     }
-                } 
+                    else
+                        MessageBox.Show("Invalid Amount! Amount should be a figure of 100 and above.");
+                }
+                else
+                    MessageBox.Show("Invalid Account Number!");
             }
+            else
+                MessageBox.Show("Reciever's Account Number or Amount fields can't be empty!");
         }
 
 

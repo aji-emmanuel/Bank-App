@@ -212,6 +212,8 @@ namespace MyBankAppWindows
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel2);
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "DashBoardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DashBoard";

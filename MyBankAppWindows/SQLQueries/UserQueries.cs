@@ -10,11 +10,11 @@ namespace SQLQueries
     public static class UserQueries
     {
         /// <summary>
-        /// Adds a new registered User to User Database
+        /// Adds a new registered User to User Database. Returns a bool if successful.
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        
+
         public static bool AddUser(UserModel user)
         {
             bool result = false;
@@ -43,7 +43,7 @@ namespace SQLQueries
         }
 
         /// <summary>
-        /// Returns a User if the inputed password is contained in Customer SQL Database.
+        /// Returns a User if the inputed password is contained in Customer SQL Database. Returns a User model
         /// </summary>
         /// <param name="email"></param>
         /// <param name="password"></param>

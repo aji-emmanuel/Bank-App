@@ -70,7 +70,6 @@ namespace MyBankAppWindows
             this.lastNameBox.Name = "lastNameBox";
             this.lastNameBox.Size = new System.Drawing.Size(420, 50);
             this.lastNameBox.TabIndex = 19;
-            this.lastNameBox.TextChanged += new System.EventHandler(this.lastNameBox_TextChanged);
             // 
             // firstNameBox
             // 
@@ -82,7 +81,6 @@ namespace MyBankAppWindows
             this.firstNameBox.Name = "firstNameBox";
             this.firstNameBox.Size = new System.Drawing.Size(420, 50);
             this.firstNameBox.TabIndex = 20;
-            this.firstNameBox.TextChanged += new System.EventHandler(this.firstNameBox_TextChanged);
             // 
             // emailBox
             // 
@@ -92,7 +90,6 @@ namespace MyBankAppWindows
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(420, 50);
             this.emailBox.TabIndex = 21;
-            this.emailBox.TextChanged += new System.EventHandler(this.emailBox_TextChanged);
             // 
             // passwordBox1
             // 
@@ -102,7 +99,6 @@ namespace MyBankAppWindows
             this.passwordBox1.Name = "passwordBox1";
             this.passwordBox1.Size = new System.Drawing.Size(420, 50);
             this.passwordBox1.TabIndex = 22;
-            this.passwordBox1.TextChanged += new System.EventHandler(this.passwordBox1_TextChanged);
             // 
             // passwordBox2
             // 
@@ -269,6 +265,8 @@ namespace MyBankAppWindows
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.WelcomePagePic);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";

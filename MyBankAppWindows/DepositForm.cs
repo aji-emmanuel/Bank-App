@@ -8,8 +8,7 @@ namespace MyBankAppWindows
 {
     public partial class DepositForm : UserControl
     {
-        readonly TransactionOperation transaction = new TransactionOperation();
-        readonly AccountOperations accountControl = new AccountOperations();
+        AccountOperations account = new AccountOperations();
 
         public DepositForm()
         {
@@ -23,30 +22,30 @@ namespace MyBankAppWindows
             string amount = textBox2.Text;
             string description = textBox3.Text;
 
-
-            if (amount.ValidateAmount() != true)      // Validates user's inputed amount
+            if(amount == String.Empty)
             {
-                MessageBox.Show("Invalid Amount! Amount should be 100 and above. ");
+                MessageBox.Show("Enter an amount!");
             }
             else
             {
-                decimal Amount = Convert.ToDecimal(amount);
-                decimal newBalance = accountControl.Deposit(accountNumber, Amount);
-                if (newBalance!=-1)
+                if (amount.ValidateAmount() != true)      // Validates user's inputed amount
                 {
-                    bool success = transaction.CreditTransaction(accountNumber, amount.ToString(), description, newBalance);
-                    if (success)
-                        MessageBox.Show("Deposit Successful!");
-                    textBox2.Clear();
-                    textBox3.Clear();
+                    MessageBox.Show("Invalid Amount! Amount should be 100 and above. ");
                 }
                 else
                 {
-                    MessageBox.Show("Account Number not found!\r\nDeposit Unsuccessful");
+                    decimal Amount = Convert.ToDecimal(amount);
+                    bool success = account.Deposit(accountNumber, description, Amount);
+
+                    if (success)
+                    {
+                        MessageBox.Show("Deposit Successful!");
+                        textBox2.Clear();
+                        textBox3.Clear();
+                    }
                 }
             }
         }
-
 
         private void InitialiseComboBox()
         {

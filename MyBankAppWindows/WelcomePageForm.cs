@@ -22,5 +22,19 @@ namespace MyBankAppWindows
             Hide();
             new RegistrationForm().Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Hide();
+            (new AboutUs()).ShowDialog();
+            this.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            (new Contact()).ShowDialog();
+            this.Show();
+        }
     }
 }
