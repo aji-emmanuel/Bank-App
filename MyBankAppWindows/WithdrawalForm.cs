@@ -30,7 +30,7 @@ namespace MyBankAppWindows
             {
                 if (amount.ValidateAmount() != true)      // Validates user's inputed amount
                 {
-                    MessageBox.Show("Invalid Amount! Minimum of #100.");
+                    MessageBox.Show("Invalid Amount! Minimum of #100. No special character allowed!");
                 }
                 else
                 {

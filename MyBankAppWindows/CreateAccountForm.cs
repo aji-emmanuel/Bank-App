@@ -14,7 +14,7 @@ namespace MyBankAppWindows
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string AccountType = radioButton1.Checked ? "Saving" : "Current";
+            string AccountType = radioButton1.Checked ? "Savings" : "Current";
             decimal AccountBalance = 100.00M;
             string AccountId = Guid.NewGuid().ToString();
             string AccountNumber;
