@@ -57,7 +57,7 @@ namespace MyBankAppWindows
                             MessageBox.Show("You can't transfer to yourself!");
                     }
                     else
-                        MessageBox.Show("Invalid Amount! Amount should be a figure of 100 and above.");
+                        MessageBox.Show("Invalid Amount! Amount should be a figure of 100 and above. No special character allowed!");
                 }
                 else
                     MessageBox.Show("Invalid Account Number!");
